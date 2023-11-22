@@ -54,12 +54,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangoProjectWeb.urls'
+import os # necesario para el siguiente código
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,3 +129,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGOUT_REDIRECT_URL = 'http://localhost:4200/inicio'
+LOGIN_REDIRECT_URL = 'http://localhost:4200/inicio'
