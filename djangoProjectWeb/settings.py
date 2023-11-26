@@ -155,8 +155,6 @@ REST_FRAMEWORK = {
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGOUT_REDIRECT_URL = 'http://localhost:4200/inicio'
-LOGIN_REDIRECT_URL = 'http://localhost:4200/inicio'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
