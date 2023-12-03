@@ -1,6 +1,4 @@
-from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet,ModelViewSet
-from rest_framework import status
 from comentarios.models import comentarios
 from comentarios.serializers import postSerializer
 from rest_framework.permissions import IsAdminUser
