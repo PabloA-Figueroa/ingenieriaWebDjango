@@ -27,6 +27,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from comentarios.api.router import router_post
+from cursos.router import urlpatterns as curso_urlpatterns
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -38,6 +39,7 @@ urlpatterns = [
     path('api-login/', UserLogIn.as_view(), name='api-login'),
 
     path('api-vista/', include(router_post.urls)),
+    path('api-curso/', include(curso_urlpatterns)),
 
     path('api/', include(router.urls)),
     path('api-user-login/', UserLogIn.as_view()),

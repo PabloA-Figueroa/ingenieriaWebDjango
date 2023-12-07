@@ -9,6 +9,7 @@ class PostModelViewSet(ModelViewSet):
     queryset = comentarios.objects.all()
 
 
+
 """
 class ComentariosAPIView(APIView):
     def get(self, request):
