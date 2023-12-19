@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'camaraComercio',
     'comentarios',
     'cursos',
-
+    'estado',
 
     'ckeditor',
     'users',

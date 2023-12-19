@@ -26,6 +26,7 @@ from users.views import UserViewSet, UserLogIn
 from django.conf.urls.static import static
 from django.conf import settings
 
+from estado.router import urlpatterns as estado_urlpatterns
 from comentarios.api.router import router_post
 from cursos.router import urlpatterns as curso_urlpatterns
 
@@ -40,6 +41,7 @@ urlpatterns = [
 
     path('api-vista/', include(router_post.urls)),
     path('api-curso/', include(curso_urlpatterns)),
+    path('api-estado/', include(estado_urlpatterns)),
 
     path('api/', include(router.urls)),
     path('api-user-login/', UserLogIn.as_view()),
