@@ -14,7 +14,7 @@ class Estado(models.Model):
     gastosAdicionales = models.IntegerField(null=True, blank=True)
     ingresos = models.IntegerField()
     gastos = models.IntegerField()
-    beneficios = models.IntegerField()
+    beneficios = models.IntegerField(null=True, blank=True)
     usuario = models.ManyToManyField(User,blank=True)
     # Asignar a este modelo el id de usuario
 
